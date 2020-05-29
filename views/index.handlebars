@@ -1,27 +1,8 @@
+
+<div id="container">
 <h1>Burgers!</h1>
 
-<div style="float: left;">
-<h2>Burgers that are ready to be eaten!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless eaten}}
-      {{> burgers/burger-block eaten=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-</div>
-<div style="float: right;">
-<h2>Burgers that are eaten!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if eaten}}
-      {{> burgers/burger-block eaten=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-</div>
+<div id="addabuger">
 <h2>Add a Burger</h2>
 <form class="create-form">
 
@@ -38,3 +19,30 @@
 
   <button type="submit">Add Burger</button>
 </form>
+</div>
+
+<div id="burgerin">
+<h2>Burgers that are ready to be eaten!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless eaten}}
+      {{> burgers/burger-block eaten=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+</div>
+<div id="burgerout">
+<h2>Burgers that are eaten!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if eaten}}
+      {{> burgers/burger-block eaten=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+</div>
+
+
+</div>
